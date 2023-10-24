@@ -1,0 +1,72 @@
+.sidebar-container {
+    width: 16%;
+    height: 1462px;
+    border-top: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    position: fixed;
+  }
+  
+  .page-container {
+    width: 90%;
+    height: 250px;
+    margin-top: 40px;
+  }
+  
+  .page {
+    width: 90%;
+    height: 50px;
+    margin-top: 6px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  /* Style for the active section */
+  .page.active {
+    background: rgba(247, 248, 250, 1);
+    color: #000; /* Text color for the active section */
+    font-weight: 700;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  
+  /* Apply the hover effect to .page */
+  .page:hover {
+    background: rgba(247, 248, 250, 1);
+    color: #000; /* Text color on hover */
+    font-weight: 700;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  
+  .page div {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+  }
+  
+  .page a {
+    text-decoration: none;
+    color: #566474;
+    font-weight: 500;
+    margin-top: 9px;
+    letter-spacing: -0.7px;
+  }
+  
+  .page span {
+    margin-top: 11px;
+    color: grey;
+  }
+  
+  @media (max-width: 1068px) {
+    a {
+      display: none;
+    }
+    .page span {
+      font-size: 30px;
+    }
+  }
+  
