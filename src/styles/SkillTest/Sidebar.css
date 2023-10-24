@@ -12,6 +12,10 @@
     height: 250px;
     margin-top: 40px;
   }
+
+  .page-container a {
+     text-decoration: none;
+  }
   
   .page {
     width: 90%;
@@ -19,13 +23,15 @@
     margin-top: 6px;
     cursor: pointer;
     text-align: center;
+    color: black;
+    font-weight: 400;
   }
   
   /* Style for the active section */
   .page.active {
     background: rgba(247, 248, 250, 1);
     color: #000; /* Text color for the active section */
-    font-weight: 700;
+    font-weight: 500;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
   }
@@ -34,7 +40,7 @@
   .page:hover {
     background: rgba(247, 248, 250, 1);
     color: #000; /* Text color on hover */
-    font-weight: 700;
+    font-weight: 500;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
   }
@@ -47,26 +53,20 @@
     justify-content: start;
     gap: 15px;
   }
-  
-  .page a {
-    text-decoration: none;
-    color: #566474;
-    font-weight: 500;
-    margin-top: 9px;
-    letter-spacing: -0.7px;
-  }
-  
+
   .page span {
-    margin-top: 11px;
+    margin-top: 18px;
     color: grey;
   }
+
   
   @media (max-width: 1068px) {
-    a {
+    p {
       display: none;
     }
     .page span {
-      font-size: 30px;
+      font-size: 25px;
+      margin-top: 10px;
     }
   }
   

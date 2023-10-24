@@ -15,30 +15,47 @@ function Sidebar() {
   return (
     <div className="sidebar-container">
       <div className="page-container">
-        <div className={`page ${activeSection === "dashboard" ? "active" : ""}`} onClick={() => handleSectionClick("dashboard")}>
-          <div>
-            <span>
-              <FiBarChart2 />
-            </span>
-            <Link to="/">Dashboard</Link>
+        <Link to="/">
+          <div
+            className={`page ${activeSection === "dashboard" ? "active" : ""}`}
+            onClick={() => handleSectionClick("dashboard")}
+          >
+            <div>
+              <span>
+                <FiBarChart2 />
+              </span>
+              <p>Dashboard</p>
+            </div>
           </div>
-        </div>
-        <div className={`page ${activeSection === "skilltest" ? "active" : ""}`} onClick={() => handleSectionClick("skilltest")}>
-          <div>
-            <span>
-              <BiAward />
-            </span>
-            <Link to="/skilltest">Skill Test</Link>
+        </Link>
+        <Link to="/skilltest">
+          <div
+            className={`page ${activeSection === "skilltest" ? "active" : ""}`}
+            onClick={() => handleSectionClick("skilltest")}
+          >
+            <div>
+              <span>
+                <BiAward />
+              </span>
+              <p>Skill Test</p>
+            </div>
           </div>
-        </div>
-        <div className={`page ${activeSection === "internships" ? "active" : ""}`} onClick={() => handleSectionClick("internships")}>
-          <div>
-            <span>
-              <AiOutlineFile />
-            </span>
-            <Link to="/internships">Internships</Link>
+        </Link>
+        <Link to="/internships">
+          <div
+            className={`page ${
+              activeSection === "internships" ? "active" : ""
+            }`}
+            onClick={() => handleSectionClick("internships")}
+          >
+            <div >
+              <span>
+                <AiOutlineFile />
+              </span>
+              <p>Internships</p>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );
