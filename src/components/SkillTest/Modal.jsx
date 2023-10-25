@@ -11,7 +11,7 @@ function Modal() {
            </div>
           <div className='modal-text'>
              <h4>Hypertext Markup Language</h4>
-             <p>Questions:08 | Duration:15 mins | Submitted on 5 jun 2021</p>
+             <span>Questions:08 | Duration:15 mins | Submitted on 5 jun 2021</span>
           </div>
         </div>
         <div className='update-button'>

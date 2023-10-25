@@ -31,10 +31,10 @@
     margin-top: 40px;
 }
 
-.modal-text h4,p{
+.modal-text h4,span{
     text-align: start;
 }
-.modal-text p{
+.modal-text span{
     font-size: 11px;
     color: grey;
 }
