@@ -2,15 +2,16 @@
     width: 16%;
     height: 1462px;
     border-top: none;
+    margin-top: -5px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
       rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-    position: fixed;
+      position: static;
   }
   
   .page-container {
     width: 90%;
     height: 250px;
-    margin-top: 40px;
+
   }
 
   .page-container a {
@@ -19,7 +20,6 @@
   
   .page {
     width: 90%;
-    height: 50px;
     margin-top: 6px;
     cursor: pointer;
     text-align: center;
@@ -31,7 +31,7 @@
   .page.active {
     background: rgba(247, 248, 250, 1);
     color: #000; /* Text color for the active section */
-    font-weight: 500;
+    font-weight: 600;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
   }
@@ -40,17 +40,18 @@
   .page:hover {
     background: rgba(247, 248, 250, 1);
     color: #000; /* Text color on hover */
-    font-weight: 500;
+    font-weight: 600;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
   }
+
   
   .page div {
     width: 70%;
     height: 100%;
     margin: auto;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 15px;
   }
 

@@ -14,7 +14,7 @@ function Navbar() {
           <div className="top-bar">
             <div>
               <img src={user} alt="user_logo" />
-              <p>Siddharth Jain</p>
+              <span>Siddharth Jain</span>
             </div>
           </div>
         </div>
