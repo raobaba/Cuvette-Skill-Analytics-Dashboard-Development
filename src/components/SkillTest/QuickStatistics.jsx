@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../styles/SkillTest/QuickStatistics.css";
 import Trophy from '../../assets/images/trophy.png';
 import Checked from '../../assets/images/checked.png';
@@ -10,36 +10,21 @@ function QuickStatistics({ rank, percentile, correctAnswers }) {
       <div className="create-space"></div>
       <h4>Quick Statistics</h4>
       <div className="quick-mini">
-        <div className="quick-box">
-          <div className="div-circle">
-            <img src={Trophy} alt="trophy" width={23} height={23} />
+        {[
+          { icon: Trophy, label: "YOUR RANK", value: rank.toLocaleString('en-US') },
+          { icon: Folder, label: "PERCENTILE", value: `${percentile} %` },
+          { icon: Checked, label: "CORRECT ANSWERS", value: `${correctAnswers}/15` },
+        ].map((item, index) => (
+          <div className="quick-box" key={index}>
+            <div className="div-circle">
+              <img src={item.icon} alt={item.label} width={23} height={23} />
+            </div>
+            <div className="description">
+              <h4>{item.value}</h4>
+              <span>{item.label}</span>
+            </div>
           </div>
-          <div className="description">
-            <h4>{rank.toLocaleString('en-US')}</h4>
-            <span>YOUR RANK</span>
-          </div>
-        </div>
-        <div class="vertical-line">
-        </div>
-        <div className="quick-box">
-          <div className="div-circle">
-            <img src={Folder} alt="trophy" width={23} height={23} />
-          </div>
-          <div className="description">
-            <h4>{percentile} %</h4>
-            <span>PERCENTILE</span>
-          </div>
-        </div>
-        <div class="vertical-line"></div>
-        <div className="quick-box">
-          <div className="div-circle">
-            <img src={Checked} alt="trophy" width={23} height={23} />
-          </div>
-          <div className="description">
-            <h4>{correctAnswers}/15</h4>
-            <span>CORRECT ANSWERS</span>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
