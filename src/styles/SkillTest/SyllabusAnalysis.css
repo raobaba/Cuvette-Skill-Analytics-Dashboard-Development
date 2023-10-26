@@ -53,7 +53,9 @@
 
 .progress {
   height: 100%;
-  border-radius: 5px 0 0 5px; 
+  border-radius: 5px 0 0 5px;
+  width: 0;
+  transition: width 1s ease;
 }
 
 .percentage {
