@@ -35,29 +35,14 @@ function SyllabusAnalysis() {
         {syllabusItems.map((item, index) => (
           <div className="horizontal-bar-graph" key={index}>
             <div className="about-input">
-              <label style={{ marginRight: item.marginRight }}>{item.label}</label>
+              <label style={{ marginRight: item.marginRight }}>
+                {item.label}
+              </label>
             </div>
             <div className="syllabus-container">
               <div className="input-graph">
-                <div className="back-input" >
-                  <div
-                    style={{
-                      height: "10px",
-                      marginTop: "9px",
-                      width:item.percentage,
-                      borderRadius: "5px",
-                      background:item.color,
-                      opacity:'100% !important'
-                    }}
-                  >
-                    <input
-                      type="range"
-                      min="0"
-                      max="100"
-                      value={item.percentage}
-                      style={{ width: "100%", height: "100%", opacity: 0 }}
-                    />
-                  </div>
+                <div class="rounded-graph">
+                  <div class="progress" style={{width:item.percentage}}></div>
                 </div>
               </div>
               <div className="percentage">

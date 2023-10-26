@@ -52,5 +52,5 @@
 .vertical-line {
     border-left: 1px solid #ebe4e4; /* 1px width, solid style, and black color */
     height: 60px; /* Set the height to 10px */
-    margin-top: 40px;
+    margin-top: 10px;
   }
