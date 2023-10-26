@@ -4,24 +4,33 @@ import TARGET from "../../assets/images/target_icon.png";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement } from "chart.js";
 ChartJS.register(ArcElement);
-function QuestionAnalysis() {
+function QuestionAnalysis({correctAnswers}) {
+
+  const totalQuestions = 15;
+  const degree = (correctAnswers / totalQuestions) * 360;
+  console.log(degree)
   const data = {
     lebels: ["Yes"],
     datasets: [
       {
         label: "Poll",
         data: [12],
-        background: ['green'],
         borderWidth: 0,
-        circumference: 270,
-        outerRadius: "30%", // You can adjust this percentage
-        innerRadius: "30%", // You can adjust this percentage
+        circumference: degree < 270 ? 270 : degree,
+        outerRadius: "80%", // You can adjust this percentage
+        innerRadius: "60%", // You can adjust this percentage
+        label: 'My First Dataset',
+        data: [300, 50, 100],
+        backgroundColor: [
+          'rgba(67, 138, 246, 1)',
+          'rgba(67, 138, 246, 0.1)',
+        ]
       },
     ],
   };
 
   const options = {
-    cutout: "65%", // This controls the size of the cutout in the center
+    cutout: "70%", // This controls the size of the cutout in the center
   };
 
   const backgroundCircle = {
@@ -37,7 +46,7 @@ function QuestionAnalysis() {
       const angle = Math.PI / 180;
       ctx.beginPath();
       ctx.lineWidth = width;
-      ctx.strokeStyle = "rgba(67, 138, 246, 1)";
+      ctx.strokeStyle = "grey";
       ctx.arc(xCoor, yCoor, outerRadius - width / 2, 0, angle * 360, false);
       ctx.stroke();
     },
@@ -48,18 +57,16 @@ function QuestionAnalysis() {
       <div className="create-space"></div>
       <div className="question-text">
         <h4 style={{ color: "rgba(30, 39, 46, 1)" }}>Question Analysis</h4>
-        <h4 className="attempt-question">07/15</h4>
+        <h4 className="attempt-question">{`${correctAnswers}/${totalQuestions}`}</h4>
       </div>
       <div className="about-improvement">
         <span>
-          You scored correct 7 questions out of 15. However it <br /> still
-          needs some improvment
+         {` You scored ${correctAnswers} questions out of ${totalQuestions}. However it still
+          needs some improvment`}
         </span>
       </div>
       <div className="circular-graph">
-        <Doughnut data={data} options={options} plugins={[backgroundCircle]}>
-          {/* Render the image inside the circular graph */}
-          <img src={TARGET} alt="target_icon" width={40} height={40} />
+        <Doughnut style={{marginLeft:'10px'}} data={data} options={options} plugins={[backgroundCircle]}>
         </Doughnut>
       </div>
     </div>

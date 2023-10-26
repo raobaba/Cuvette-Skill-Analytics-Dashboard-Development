@@ -10,7 +10,7 @@ function Home() {
   const [quickStats, setQuickStats] = useState({
     rank: "12,890",
     percentile: "38",
-    correctAnswers: "07/15",
+    correctAnswers: "07",
   });
 
   const updateQuickStatistics = (newStats) => {
@@ -34,7 +34,7 @@ function Home() {
                />
             </div>
             <div className="comparisonGraph-container">
-               <ComparisonGraph/>
+               <ComparisonGraph percentile={quickStats.percentile}/>
             </div>
           </div>
           <div className="second-container">
@@ -42,7 +42,7 @@ function Home() {
                  <SyllabusAnalysis/>
             </div>
             <div className="questionAnalysis-container">
-                 <QuestionAnalysis/>
+                 <QuestionAnalysis correctAnswers={quickStats.correctAnswers}/>
             </div>
           </div>
         </div>

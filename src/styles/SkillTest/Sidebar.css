@@ -58,7 +58,10 @@
     margin-top: 18px;
     color: grey;
   }
-
+  .create-space-sidebar{
+    width: 100%;
+    height: 30px;
+}
   
   @media (max-width: 1068px) {
     p {

@@ -15,6 +15,7 @@ function Sidebar() {
   return (
     <div className="sidebar-container">
       <div className="page-container">
+      <div className="create-space-sidebar"></div>
         <Link to="/">
           <div
             className={`page ${activeSection === "dashboard" ? "active" : ""}`}

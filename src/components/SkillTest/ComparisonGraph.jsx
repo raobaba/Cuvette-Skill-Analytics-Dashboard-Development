@@ -16,16 +16,12 @@ ChartJS.register(
   LinearScale,
   PointElement
 )
-
-
-
-
-function ComparisonGraph() {
+function ComparisonGraph({percentile}) {
    const data = {
     labels:['0%','20%','40%','60%','80%','100%'],
     datasets:[{
       label: "My First dataset",
-      data:[20,59,20,90,50,83],
+      data:[0,39,percentile,90,10,60],
       backgroundColor:'transparent',
       borderColor:'grey',
       PointBorderColor:'transparent',
@@ -59,10 +55,10 @@ function ComparisonGraph() {
         },
       },
       y: {
-        min: 10,
+        min: 0,
         max: 100,
         ticks: {
-          stepSize: 10,
+          stepSize: 20,
           callback: (value) => value + '%',
         },
         grid: {

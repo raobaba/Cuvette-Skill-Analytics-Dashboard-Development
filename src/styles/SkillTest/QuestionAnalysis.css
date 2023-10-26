@@ -28,8 +28,9 @@
 }
 
 .circular-graph{
-    width: 50%;
+    width: 60%;
     margin: auto;
-    margin-left: 90px;
+    height: 200px;
+    margin-left: 70px;
     margin-top: 20%;
 }
