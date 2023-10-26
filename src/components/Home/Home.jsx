@@ -9,7 +9,7 @@ import QuestionAnalysis from "../SkillTest/QuestionAnalysis";
 function Home() {
   const [quickStats, setQuickStats] = useState({
     rank: "12,890",
-    percentile: "38",
+    percentile: "37",
     correctAnswers: "07",
   });
 
@@ -23,26 +23,26 @@ function Home() {
       <div className="mini-home-container">
         <div className="container">
           <div className="first-container">
-            <div className="modal-container">
+            <div className="section-container modal-container">
               <Modal updateQuickStatistics={updateQuickStatistics} />
             </div>
-            <div className='quickStatistics-container'>
-               <QuickStatistics
-                 rank={quickStats.rank}
-                 percentile={quickStats.percentile}
-                 correctAnswers={quickStats.correctAnswers}
-               />
+            <div className="section-container quickStatistics-container">
+              <QuickStatistics
+                rank={quickStats.rank}
+                percentile={quickStats.percentile}
+                correctAnswers={quickStats.correctAnswers}
+              />
             </div>
-            <div className="comparisonGraph-container">
-               <ComparisonGraph percentile={quickStats.percentile}/>
+            <div className="section-container comparisonGraph-container">
+              <ComparisonGraph percentile={quickStats.percentile} />
             </div>
           </div>
           <div className="second-container">
-            <div className="syllabusAnalysis-container">
-                 <SyllabusAnalysis/>
+            <div className="section-container syllabusAnalysis-container">
+              <SyllabusAnalysis />
             </div>
-            <div className="questionAnalysis-container">
-                 <QuestionAnalysis correctAnswers={quickStats.correctAnswers}/>
+            <div className="section-container questionAnalysis-container">
+              <QuestionAnalysis correctAnswers={quickStats.correctAnswers} />
             </div>
           </div>
         </div>

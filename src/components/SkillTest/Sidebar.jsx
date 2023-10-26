@@ -15,7 +15,7 @@ function Sidebar() {
   return (
     <div className="sidebar-container">
       <div className="page-container">
-      <div className="create-space-sidebar"></div>
+        <div className="create-space-sidebar"></div>
         <Link to="/">
           <div
             className={`page ${activeSection === "dashboard" ? "active" : ""}`}
@@ -44,12 +44,10 @@ function Sidebar() {
         </Link>
         <Link to="/internships">
           <div
-            className={`page ${
-              activeSection === "internships" ? "active" : ""
-            }`}
+            className={`page ${activeSection === "internships" ? "active" : ""}`}
             onClick={() => handleSectionClick("internships")}
           >
-            <div >
+            <div>
               <span>
                 <AiOutlineFile />
               </span>

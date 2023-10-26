@@ -28,7 +28,7 @@ function SyllabusAnalysis() {
   ];
 
   return (
-    <div className="syllabusAnalysis">
+    <div className="syllabus-analysis">
       <div className="create-space"></div>
       <div className="syllabus">
         <h4>Syllabus wise Analysis</h4>
@@ -71,3 +71,4 @@ function SyllabusAnalysis() {
 }
 
 export default SyllabusAnalysis;
+

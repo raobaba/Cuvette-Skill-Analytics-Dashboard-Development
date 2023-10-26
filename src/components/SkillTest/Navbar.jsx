@@ -6,12 +6,12 @@ import user from "../../assets/images/user_logo.png";
 function Navbar() {
   return (
     <div>
-      <div className="custom-navbar-container"> {/* Renamed the container for the entire navbar */}
-        <div className="custom-container"> {/* Renamed the inner container */}
-          <div className="custom-logo"> {/* Renamed the logo container */}
+      <div className="custom-navbar-container"> 
+        <div className="custom-container"> 
+          <div className="custom-logo"> 
             <img src={cuvette} alt="cuvette_logo" />
           </div>
-          <div className="custom-top-bar"> {/* Renamed the top bar container */}
+          <div className="custom-top-bar"> 
             <div>
               <img src={user} alt="user_logo" />
               <span>Siddharth Jain</span>

@@ -15,7 +15,7 @@ function QuickStatistics({ rank, percentile, correctAnswers }) {
             <img src={Trophy} alt="trophy" width={23} height={23} />
           </div>
           <div className="description">
-            <h4>{rank}</h4>
+            <h4>{rank.toLocaleString('en-US')}</h4>
             <span>YOUR RANK</span>
           </div>
         </div>
