@@ -1,0 +1,56 @@
+.syllabusAnalysis {
+  width: 100%;
+  height: 100%;
+}
+
+.syllabus h4 {
+  text-align: start;
+  margin-left: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+.create-space {
+  width: 100%;
+  height: 10px;
+}
+.horizontal-bar-graph {
+  width: 100%;
+  margin-top: 33px;
+}
+.back-input {
+  width: 100%;
+  background-color: rgba(86, 100, 116, 1);
+  height: "10px";
+  border-radius: 10px;
+  margin-top: 15px;
+ 
+}
+
+.syllabus-container {
+  width: 85%;
+  height: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.about-input {
+  width: 80%;
+  height: 20px;
+}
+.about-input label {
+  margin-right: 70px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: rgba(86, 100, 116, 1);
+  font-size: 16px;
+}
+
+.input-graph {
+  width: 57%;
+  height: 100%;
+  opacity: 60%;
+}
+.percentage {
+  width: 10%;
+  height: 100%;
+}

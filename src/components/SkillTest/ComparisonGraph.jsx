@@ -1,46 +1,82 @@
 import React from "react";
 import "../../styles/SkillTest/ComparisonGraph.css";
-import CanvasJSReact from '@canvasjs/react-charts';
-const CanvasJSChart = CanvasJSReact.CanvasJSChart;
+import Graph_Icon from '../../assets/images/graph_icon.png';
+
+import { Line} from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement
+} from 'chart.js'
+ChartJS.register(
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement
+)
+
+
+
 
 function ComparisonGraph() {
-  const percentageValues = [
-    { x: 0, label: '0%' },
-    { x: 20, label: '20%' },
-    { x: 40, label: '40%' },
-    { x: 60, label: '60%' },
-    { x: 80, label: '80%' },
-    { x: 100, label: '100%' }
-  ];
-
-  const options = {
-    animationEnabled: true,
-   
-    axisX: {
-      title: "Percentage",
-      interval: 20,
-      minimum: 0,
-      maximum: 100,
-      labelFormatter: function (e) {
-        return e.value + "%";
-      }
+   const data = {
+    labels:['0%','20%','40%','60%','80%','100%'],
+    datasets:[{
+      label: "My First dataset",
+      data:[20,59,20,90,50,83],
+      backgroundColor:'transparent',
+      borderColor:'grey',
+      PointBorderColor:'transparent',
+      PointBorderWidth:1,
+      tension:0.4
+    }]
+   }
+   const options = {
+    plugins: {
+      legend: false,
+      tooltip: {
+        callbacks: {
+          label: (context) => {
+            const label = context.dataset.data[context.dataIndex];
+            return `${label} Percentile <br/> Your Rank`;
+          },
+        },
+      },
     },
-    axisY: {
-      title: "Sales (in USD)",
-      prefix: "$"
+    interaction: {
+      mode: 'index', 
+      pointHoverBackgroundColor:'black',
+      pointHoverBorderColor	:"white",
+      pointHoverBorderWidth:'red',
+      pointHoverRadius:5
     },
-    data: [
-      {
-        yValueFormatString: "$#,###",
-        type: "spline",
-        dataPoints: percentageValues
-      }
-    ]
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        min: 10,
+        max: 100,
+        ticks: {
+          stepSize: 10,
+          callback: (value) => value + '%',
+        },
+        grid: {
+          display: false,
+        },
+      },
+    },
   };
+  
   return (
     <div className="comparisonGraph">
       <div className="mini-container">
         <div className="comp-text">
+        <div className="create-space-comp"></div>
           <h4>Comparison Graph</h4>
           <span>
             You scored 37% percentile which is lower then the <br />
@@ -48,11 +84,13 @@ function ComparisonGraph() {
           </span>
         </div>
         <div className="comp-logo">
-          <div className="circle">logo</div>
+          <div className="circle">
+            <img src={Graph_Icon} alt="graph_icon" width={23} height={23}/>
+          </div>
         </div>
       </div>
       <div className="comp-graph">
-      <CanvasJSChart options={options} />
+      <Line data={data} options={options}></Line>
       </div>
     </div>
   );

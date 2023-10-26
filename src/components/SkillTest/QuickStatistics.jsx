@@ -7,6 +7,7 @@ import Folder from '../../assets/images/folder.png';
 function QuickStatistics() {
   return (
     <div className="quickStatistics">
+          <div className="create-space"></div>
         <h4>Quick Statistics</h4>
       <div className="quick-mini">
         <div className="quick-box">
