@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/Home/Home.css";
 import Modal from "../SkillTest/Modal";
 import QuickStatistics from "../SkillTest/QuickStatistics";
@@ -7,6 +7,16 @@ import ComparisonGraph from "../SkillTest/ComparisonGraph";
 import QuestionAnalysis from "../SkillTest/QuestionAnalysis";
 
 function Home() {
+  const [quickStats, setQuickStats] = useState({
+    rank: "12,890",
+    percentile: "38",
+    correctAnswers: "07/15",
+  });
+
+  const updateQuickStatistics = (newStats) => {
+    setQuickStats(newStats);
+  };
+
   return (
     <div className="home-container">
       <span>Skill Test</span>
@@ -14,10 +24,14 @@ function Home() {
         <div className="container">
           <div className="first-container">
             <div className="modal-container">
-              <Modal/>
+              <Modal updateQuickStatistics={updateQuickStatistics} />
             </div>
             <div className='quickStatistics-container'>
-               <QuickStatistics/>
+               <QuickStatistics
+                 rank={quickStats.rank}
+                 percentile={quickStats.percentile}
+                 correctAnswers={quickStats.correctAnswers}
+               />
             </div>
             <div className="comparisonGraph-container">
                <ComparisonGraph/>
