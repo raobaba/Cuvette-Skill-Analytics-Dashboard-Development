@@ -1,4 +1,4 @@
-.navbar-container {
+.custom-navbar-container { /* Styling for the entire navbar container */
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   width: 100%;
   height: 80px;
@@ -6,12 +6,12 @@
   margin: auto;
 }
 
-.container {
+.custom-container { /* Styling for the inner container */
   display: flex;
   justify-content: space-around;
 }
 
-.logo img {
+.custom-logo img { /* Styling for the logo */
   width: 120px;
   height: 29.24px;
   margin-top: 25px;
@@ -19,7 +19,7 @@
   cursor: pointer;
 }
 
-.top-bar {
+.custom-top-bar { /* Styling for the top bar */
   display: flex;
   font-weight: 700;
   width: 559px;
@@ -30,7 +30,7 @@
   cursor: pointer;
 }
 
-.top-bar div {
+.custom-top-bar div { /* Styling for the elements inside the top bar */
   width: 160px;
   height: 40px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
@@ -41,11 +41,11 @@
   border-radius: 10px;
 }
 
-.top-bar div span {
+.custom-top-bar div span { /* Styling for the text inside the top bar */
   margin-top: 10px;
 }
 
-.top-bar img {
+.custom-top-bar img { /* Styling for images inside the top bar */
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -54,18 +54,18 @@
 
 /* Media query for smaller screens */
 @media (max-width: 1068px) {
-  .logo img {
-    margin-left: 10px;
+  .custom-logo img {
+    margin-left: 10px; 
   }
-  .top-bar {
-    margin-right: 10px;
+  .custom-top-bar {
+    margin-right: 10px; 
   }
 }
 @media (max-width: 696px) {
-  .logo img {
-    margin-left: 10px;
+  .custom-logo img {
+    margin-left: 10px; 
   }
-  .top-bar {
-    margin-right: 10px;
+  .custom-top-bar {
+    margin-right: 10px; 
   }
 }
