@@ -27,3 +27,9 @@
     font-weight: 400;
 }
 
+.circular-graph{
+    width: 50%;
+    margin: auto;
+    margin-left: 90px;
+    margin-top: 20%;
+}

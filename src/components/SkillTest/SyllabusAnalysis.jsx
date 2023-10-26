@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/SkillTest/SyllabusAnalysis.css";
 
+
 function SyllabusAnalysis() {
   const syllabusItems = [
     {
@@ -27,6 +28,7 @@ function SyllabusAnalysis() {
     },
   ];
 
+
   return (
     <div className="syllabusAnalysis">
       <div className="create-space"></div>
@@ -42,7 +44,7 @@ function SyllabusAnalysis() {
             <div className="syllabus-container">
               <div className="input-graph">
                 <div class="rounded-graph">
-                  <div class="progress" style={{width:item.percentage}}></div>
+                  <div class="progress" style={{width:item.percentage,background:item.color}}></div>
                 </div>
               </div>
               <div className="percentage">
