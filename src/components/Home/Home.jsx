@@ -7,15 +7,9 @@ import ComparisonGraph from "../SkillTest/ComparisonGraph";
 import QuestionAnalysis from "../SkillTest/QuestionAnalysis";
 
 function Home() {
-  const [quickStats, setQuickStats] = useState({
-    rank: "12,890",
-    percentile: "37",
-    correctAnswers: "07",
-  });
+  const [quickStats, setQuickStats] = useState({ rank: "12,890", percentile: "37", correctAnswers: "07" });
 
-  const updateQuickStatistics = (newStats) => {
-    setQuickStats(newStats);
-  };
+  const updateQuickStatistics = (newStats) => setQuickStats(newStats);
 
   return (
     <div className="home-container">
@@ -27,11 +21,7 @@ function Home() {
               <Modal updateQuickStatistics={updateQuickStatistics} />
             </div>
             <div className="section-container quickStatistics-container">
-              <QuickStatistics
-                rank={quickStats.rank}
-                percentile={quickStats.percentile}
-                correctAnswers={quickStats.correctAnswers}
-              />
+              <QuickStatistics rank={quickStats.rank} percentile={quickStats.percentile} correctAnswers={quickStats.correctAnswers} />
             </div>
             <div className="section-container comparisonGraph-container">
               <ComparisonGraph percentile={quickStats.percentile} />
