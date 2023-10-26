@@ -1,30 +1,36 @@
 import React from "react";
 import "../../styles/SkillTest/QuestionAnalysis.css";
+import TARGET from "../../assets/images/target_icon.png";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement } from "chart.js";
 ChartJS.register(ArcElement);
+function QuestionAnalysis({correctAnswers}) {
 
-function QuestionAnalysis({ correctAnswers }) {
   const totalQuestions = 15;
   const degree = (correctAnswers / totalQuestions) * 360;
-
+  console.log(degree)
   const data = {
     lebels: ["Yes"],
     datasets: [
       {
         label: "Poll",
+        data: [12],
         borderWidth: 0,
-        circumference: degree < 270 ? 270 : degree,
-        outerRadius: "80%",
-        innerRadius: "60%",
+        circumference: degree < 270 ? 270 : degree ,
+        outerRadius: "80%", // You can adjust this percentage
+        innerRadius: "60%", // You can adjust this percentage
+        label: 'My First Dataset',
         data: [300, 50, 100],
-        backgroundColor: ['rgba(67, 138, 246, 1)', 'rgba(67, 138, 246, 0.1)'],
+        backgroundColor: [
+          'rgba(67, 138, 246, 1)',
+          'rgba(67, 138, 246, 0.1)',
+        ]
       },
     ],
   };
 
   const options = {
-    cutout: "70%",
+    cutout: "70%", // This controls the size of the cutout in the center
   };
 
   const backgroundCircle = {
@@ -55,11 +61,13 @@ function QuestionAnalysis({ correctAnswers }) {
       </div>
       <div className="about-improvement">
         <span>
-          {` You scored ${correctAnswers} questions out of ${totalQuestions}. However it still needs some improvement`}
+         {` You scored ${correctAnswers} questions out of ${totalQuestions}. However it still
+          needs some improvment`}
         </span>
       </div>
       <div className="circular-graph">
-        <Doughnut style={{ marginLeft: '10px' }} data={data} options={options} plugins={[backgroundCircle]} />
+        <Doughnut style={{marginLeft:'10px'}} data={data} options={options} plugins={[backgroundCircle]}>
+        </Doughnut>
       </div>
     </div>
   );

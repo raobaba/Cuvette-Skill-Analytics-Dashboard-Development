@@ -34,6 +34,22 @@ function ComparisonGraph({ percentile }) {
     }]
   };
 
+  // const { ctx, tooltip, chartArea:{top,buttom,left,right,height}, scales:{x,y} } = chart;
+  // if(tooltip._active.length>0){
+  //   const xCoor = x.getPixelForValue(tooltip.dataPoints[0].dataIndex)
+  //   const yCoor = y.getPixelForValue(tooltip.dataPoints[0].dataIndex)
+  //   ctx.save();
+  //   ctx.beginPath();
+  //   ctx.lineWidth=3;
+  //   ctx.strokeStyle = 'rgba(0,0,0,1)';
+  //   ctx.setLineDash([6,6]);
+  //   ctx.moveTo(xCoor,yCoor);
+  //   ctx.lineTo(xCoor,yCoor);
+  //   ctx.stroke();
+  //   ctx.closePath();
+  //   ctx.setLineDash([]);
+  // }
+
   const options = {
     plugins: {
       legend: false,
