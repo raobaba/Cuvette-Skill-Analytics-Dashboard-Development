@@ -8,49 +8,32 @@ import "../../styles/SkillTest/Sidebar.css";
 function Sidebar() {
   const [activeSection, setActiveSection] = useState("skilltest");
 
-  const handleSectionClick = (section) => {
-    setActiveSection(section);
-  };
+  const handleSectionClick = (section) => setActiveSection(section);
 
   return (
     <div className="sidebar-container">
       <div className="page-container">
         <div className="create-space-sidebar"></div>
         <Link to="/">
-          <div
-            className={`page ${activeSection === "dashboard" ? "active" : ""}`}
-            onClick={() => handleSectionClick("dashboard")}
-          >
+          <div className={`page ${activeSection === "dashboard" ? "active" : ""}`} onClick={() => handleSectionClick("dashboard")}>
             <div>
-              <span>
-                <FiBarChart2 />
-              </span>
+              <span><FiBarChart2 /></span>
               <p>Dashboard</p>
             </div>
           </div>
         </Link>
         <Link to="/skilltest">
-          <div
-            className={`page ${activeSection === "skilltest" ? "active" : ""}`}
-            onClick={() => handleSectionClick("skilltest")}
-          >
+          <div className={`page ${activeSection === "skilltest" ? "active" : ""}`} onClick={() => handleSectionClick("skilltest")}>
             <div>
-              <span>
-                <BiAward />
-              </span>
+              <span><BiAward /></span>
               <p>Skill Test</p>
             </div>
           </div>
         </Link>
         <Link to="/internships">
-          <div
-            className={`page ${activeSection === "internships" ? "active" : ""}`}
-            onClick={() => handleSectionClick("internships")}
-          >
+          <div className={`page ${activeSection === "internships" ? "active" : ""}`} onClick={() => handleSectionClick("internships")}>
             <div>
-              <span>
-                <AiOutlineFile />
-              </span>
+              <span><AiOutlineFile /></span>
               <p>Internships</p>
             </div>
           </div>
@@ -61,3 +44,4 @@ function Sidebar() {
 }
 
 export default Sidebar;
+
